@@ -62,7 +62,8 @@
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true">
+                    android:layout_alignParentEnd="true"
+                    fab:fab_addButtonSize="mini">
 
                     <com.getbase.floatingactionbutton.FloatingActionButton
                         android:id="@+id/fab_notes"
@@ -72,7 +73,8 @@
                         fab:fab_colorPressed="@color/accent_dark"
                         fab:fab_plusIconColor="@color/white"
                         fab:fab_icon="@drawable/ic_note_add_black_24dp"
-                        fab:fab_title="Create Notes" />
+                        fab:fab_title="Create Notes"
+                        fab:fab_size="mini"/>
 
                     <com.getbase.floatingactionbutton.FloatingActionButton
                         android:id="@+id/fab_todo"
@@ -82,7 +84,8 @@
                         fab:fab_colorPressed="@color/accent_dark"
                         fab:fab_plusIconColor="@color/white"
                         fab:fab_icon="@drawable/ic_watch_later_black_24dp"
-                        fab:fab_title="Create ToDo" />
+                        fab:fab_title="Create ToDo"
+                        fab:fab_size="mini"/>
 
                     <com.getbase.floatingactionbutton.FloatingActionButton
                         android:id="@+id/fab_files"
@@ -92,11 +95,24 @@
                         fab:fab_colorPressed="@color/accent_dark"
                         fab:fab_plusIconColor="@color/white"
                         fab:fab_icon="@drawable/ic_attach_file_black_24dp"
-                        fab:fab_title="Add to Vault" />
+                        fab:fab_title="Add to Vault"
+                        fab:fab_size="mini"/>
 
                 </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
-
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/heart"
+                    android:scaleType="centerInside"
+                    fab:fab_size="mini"
+                    android:layout_gravity="left|bottom"
+                    android:id="@+id/RateApp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    />
 
                 <LinearLayout
                     android:orientation="vertical"
