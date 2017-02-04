@@ -36,10 +36,10 @@ public class RegisterGenPassActivity extends AppCompatActivity {
 
         SharedPreferences spref = getSharedPreferences("UserInfo",Context.MODE_PRIVATE);
         SharedPreferences.Editor edit = spref.edit();
-        Integer pic = spref.getInt("pic", 1);
-        if(pic==1)
+        String pic = spref.getString("pic","");
+        if(pic.equals("male"))
             imgSelected.setImageResource(R.drawable.male);
-        else if(pic==2)
+        else if(pic.equals("female"))
             imgSelected.setImageResource(R.drawable.female);
 
         String Name = spref.getString("name","");

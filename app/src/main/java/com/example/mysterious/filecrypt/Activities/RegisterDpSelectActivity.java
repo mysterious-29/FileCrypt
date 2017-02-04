@@ -54,7 +54,8 @@ public class RegisterDpSelectActivity extends AppCompatActivity {
     {
         SharedPreferences sharedPreferences = getSharedPreferences("UserInfo", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("pic",1);
+        editor.putString("pic","male");
+        editor.commit();
 
         Intent intent = new Intent(this,RegisterSetNameActivity.class);
         startActivity(intent);
@@ -65,9 +66,11 @@ public class RegisterDpSelectActivity extends AppCompatActivity {
     {
         SharedPreferences sharedPreferences = getSharedPreferences("UserInfo", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("pic",2);
+        editor.putString("pic","female");
+        editor.commit();
 
         Intent intent = new Intent(this,RegisterSetNameActivity.class);
         startActivity(intent);
     }
+
 }

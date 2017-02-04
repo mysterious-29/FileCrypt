@@ -68,4 +68,10 @@ public class CheckInActivity extends AppCompatActivity {
             tvForgotPassword.setTextColor(0xFFF06D2F);
         }
     }
+
+    public void ForgotPassword(View view)
+    {
+        Intent intent = new Intent(this,ForgotPasswordActivity.class);
+        startActivity(intent);
+    }
 }
