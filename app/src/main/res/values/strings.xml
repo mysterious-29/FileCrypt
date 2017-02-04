@@ -1,7 +1,28 @@
 <resources>
     <string name="app_name">FileCrypt</string>
+
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
+
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+
+    <string name="slide_1_title">Make Note</string>
+    <string name="slide_1_desc">The Safest way to Create Private notes.</string>
+
+    <string name="slide_2_title">To See Todo</string>
+    <string name="slide_2_desc">Also Show Todo..Its Cool!</string>
+
+    <string name="slide_3_title">Hideing Media Also</string>
+    <string name="slide_3_desc">To make sure Yours Media is safe!</string>
+
+    <string name="slide_4_title">So! Lets Go!</string>
+    <string name="slide_4_desc">To Lock Anythings</string>
+
 </resources>
