@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:id="@+id/imgSelected"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/tvWelcome"
+        android:text="Welcome"
+        android:textSize="20dp"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_below="@id/imgSelected"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp" />
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/tvNameSelected"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/tvWelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp" />
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:textSize="15dp"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:id="@+id/tvMessage"
+        android:text="Let's Get Started"
+        android:layout_below="@id/tvNameSelected"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp" />
+
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/tvPassword"
+        android:text="Password:"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:layout_below="@id/tvMessage"/>
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/tbPassword"
+        android:inputType="textPassword"
+        android:layout_toRightOf="@+id/tvPassword"
+        android:layout_below="@id/tvMessage"/>
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:id="@+id/tvConfirmPassword"
+        android:text="Confirm Password:"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:layout_below="@id/tvPassword"/>
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tbConfirmPassword"
+        android:inputType="textPassword"
+        android:layout_toRightOf="@+id/tvConfirmPassword"
+        android:layout_below="@id/tbPassword"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="START"
+        android:id="@+id/btnStart"
+        android:layout_below="@id/tbConfirmPassword"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:onClick="Start"/>
+
+</RelativeLayout>

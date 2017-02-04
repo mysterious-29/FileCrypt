@@ -13,16 +13,16 @@
     <string name="start">GOT IT</string>
 
 
-    <string name="slide_1_title">Make Note</string>
-    <string name="slide_1_desc">The Safest way to Create Private notes.</string>
+    <string name="slide_1_title">Make Private Notes</string>
+    <string name="slide_1_desc">The Safest way to Create and Manage notes.</string>
 
-    <string name="slide_2_title">To See Todo</string>
-    <string name="slide_2_desc">Also Show Todo..Its Cool!</string>
+    <string name="slide_2_title">To Create Todo</string>
+    <string name="slide_2_desc">Also Manages Todo List...Its Cool!</string>
 
-    <string name="slide_3_title">Hideing Media Also</string>
-    <string name="slide_3_desc">To make sure Yours Media is safe!</string>
+    <string name="slide_3_title">Hiding Media Also</string>
+    <string name="slide_3_desc">To make sure your Documents, Images and Videos are safe!</string>
 
-    <string name="slide_4_title">So! Lets Go!</string>
-    <string name="slide_4_desc">To Lock Anythings</string>
+    <string name="slide_4_title">So! Lets Start the Fun!</string>
+    <string name="slide_4_desc">Lock Anything and Everything with Ultimate Ease</string>
 
 </resources>
