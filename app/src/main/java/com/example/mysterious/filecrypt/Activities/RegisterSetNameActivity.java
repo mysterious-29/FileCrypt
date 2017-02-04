@@ -30,10 +30,10 @@ public class RegisterSetNameActivity extends AppCompatActivity {
 
         SharedPreferences srpef = getSharedPreferences("UserInfo",Context.MODE_PRIVATE);
         SharedPreferences.Editor edit = srpef.edit();
-        Integer pic = srpef.getInt("pic",1);
-        if(pic==1)
+        String pic = srpef.getString("pic","");
+        if(pic.equals("male"))
             imgSelected.setImageResource(R.drawable.male);
-        else if(pic==2)
+        else if(pic.equals("female"))
             imgSelected.setImageResource(R.drawable.female);
 
 
