@@ -15,13 +15,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.HomeActivity"/>
+        <activity android:name=".Activities.HomeActivity">
+
+        </activity>
 
 
         <activity android:name=".Activities.CheckInActivity" />
         <activity android:name=".Activities.LoadingActivity" />
         <activity android:name=".Activities.VaultActivity" />
-        <activity android:name=".Activities.AddToVaultActivity" />
+        <activity android:name=".Activities.AddToVaultActivity" >
+
+        </activity>
         <activity android:name=".Activities.RegisterDpSelectActivity"/>
         <activity android:name=".Activities.RegisterSetNameActivity" />
         <activity android:name=".Activities.RegisterGenPassActivity"/>

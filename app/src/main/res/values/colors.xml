@@ -5,6 +5,13 @@
     <color name="colorPrimaryDark">#1976D2</color>
     <color name="colorAccent">#c2110e</color>
 
+    <color name="accent">#ff5252</color>
+
+    <color name="accent_dark">#ff2929</color>
+    <color name="secondary_text">#727272</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_overlay">#F3F3F3</color>
+    <color name="black">#000000</color>
 
 
     <color name="bg_screen1">#f64c73</color>

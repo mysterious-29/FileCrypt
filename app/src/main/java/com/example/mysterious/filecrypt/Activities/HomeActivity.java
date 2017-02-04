@@ -1,6 +1,8 @@
 package com.example.mysterious.filecrypt.Activities;
 
+import android.content.Intent;
 import android.content.res.Configuration;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -37,10 +39,22 @@ public class HomeActivity extends AppCompatActivity {
     private ActionBarDrawerToggle mDrawerToggle;
     private Toolbar topToolBar;
 
+    private com.getbase.floatingactionbutton.FloatingActionButton fab_files;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        fab_files = (com.getbase.floatingactionbutton.FloatingActionButton)findViewById(R.id.fab_files);
+        fab_files.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this ,AddToVaultActivity.class);
+                startActivity(intent);
+            }
+        });
 
         mTitle = mDrawerTitle = getTitle();
 
@@ -53,11 +67,11 @@ public class HomeActivity extends AppCompatActivity {
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
 
         List<NavDrawItemModel> listViewItems = new ArrayList<NavDrawItemModel>();
-        listViewItems.add(new NavDrawItemModel("About App", android.R.drawable.ic_menu_send));
-        listViewItems.add(new NavDrawItemModel("Feedback", android.R.drawable.ic_menu_send));
-        listViewItems.add(new NavDrawItemModel("Settings", android.R.drawable.ic_menu_send));
-        listViewItems.add(new NavDrawItemModel("The Team", android.R.drawable.ic_menu_send));
-        listViewItems.add(new NavDrawItemModel("Contact Us", android.R.drawable.ic_menu_send));
+        listViewItems.add(new NavDrawItemModel("About App", R.drawable.ic_info_black_24dp));
+        listViewItems.add(new NavDrawItemModel("Feedback", R.drawable.ic_feedback_black_24dp));
+        listViewItems.add(new NavDrawItemModel("Settings", R.drawable.ic_settings_black_24dp));
+        listViewItems.add(new NavDrawItemModel("The Team", R.drawable.ic_group_work_black_24dp));
+        listViewItems.add(new NavDrawItemModel("Contact Us", R.drawable.ic_settings_phone_black_24dp));
 
 
         mDrawerList.setAdapter(new NavDrawAdapter(this, listViewItems));
