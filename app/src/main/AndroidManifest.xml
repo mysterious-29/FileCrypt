@@ -16,7 +16,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.CheckInActivity" />
-        <activity android:name=".Activities.LoadingActivity"></activity>
+        <activity android:name=".Activities.LoadingActivity" />
+        <activity android:name=".Activities.VaultActivity" />
+        <activity android:name=".Activities.AddToVaultActivity"></activity>
     </application>
 
 </manifest>
