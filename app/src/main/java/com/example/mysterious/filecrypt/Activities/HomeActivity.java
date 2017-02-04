@@ -1,7 +1,11 @@
 package com.example.mysterious.filecrypt.Activities;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.app.Fragment;
@@ -40,12 +44,15 @@ public class HomeActivity extends AppCompatActivity {
     private Toolbar topToolBar;
 
     private com.getbase.floatingactionbutton.FloatingActionButton fab_files,fab_notes,fab_todo;
+    private com.getbase.floatingactionbutton.FloatingActionButton RateApp;
+    Context context;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        context = this;
 
         fab_files = (com.getbase.floatingactionbutton.FloatingActionButton)findViewById(R.id.fab_files);
         fab_files.setOnClickListener(new View.OnClickListener() {
@@ -69,8 +76,19 @@ public class HomeActivity extends AppCompatActivity {
         fab_todo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, CreateNoteActivity.class);
+                Intent intent = new Intent(HomeActivity.this, CreateTodoActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        RateApp = (com.getbase.floatingactionbutton.FloatingActionButton)findViewById(R.id.RateApp);
+        RateApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Dialog db = new Dialog(context);
+                db.setContentView(R.layout.dialograteapp);
+                db.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                db.show();
             }
         });
 
@@ -140,7 +158,9 @@ public class HomeActivity extends AppCompatActivity {
                 fragment = new AboutUs();
                 break;
             case 1:
+            {
                 fragment = new Feedback();
+            }
                 break;
             case 2:
                 fragment = new Settings();
