@@ -39,7 +39,7 @@ public class HomeActivity extends AppCompatActivity {
     private ActionBarDrawerToggle mDrawerToggle;
     private Toolbar topToolBar;
 
-    private com.getbase.floatingactionbutton.FloatingActionButton fab_files;
+    private com.getbase.floatingactionbutton.FloatingActionButton fab_files,fab_notes,fab_todo;
 
 
     @Override
@@ -51,7 +51,25 @@ public class HomeActivity extends AppCompatActivity {
         fab_files.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this ,AddToVaultActivity.class);
+                Intent intent = new Intent(HomeActivity.this, AddToVaultActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        fab_notes = (com.getbase.floatingactionbutton.FloatingActionButton)findViewById(R.id.fab_notes);
+        fab_notes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, CreateNoteActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        fab_todo = (com.getbase.floatingactionbutton.FloatingActionButton)findViewById(R.id.fab_todo);
+        fab_todo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, CreateNoteActivity.class);
                 startActivity(intent);
             }
         });
@@ -189,5 +207,24 @@ public class HomeActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void Notes(View view)
+    {
+        Intent intent = new Intent(HomeActivity.this,ViewNotesActivity.class);
+        startActivity(intent);
+    }
+
+    public void Todo(View view)
+    {
+        Intent intent = new Intent(HomeActivity.this,ViewTodoActivity.class);
+        startActivity(intent);
+    }
+
+    public void Vault(View view)
+    {
+        Intent intent = new Intent(HomeActivity.this,VaultActivity.class);
+        startActivity(intent);
+    }
+
 
 }
