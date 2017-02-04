@@ -20,10 +20,14 @@
         <activity android:name=".Activities.LoadingActivity" />
         <activity android:name=".Activities.VaultActivity" />
         <activity android:name=".Activities.AddToVaultActivity" />
-        <activity android:name=".Activities.RegisterDpSelectActivity"/>
+        <activity android:name=".Activities.RegisterDpSelectActivity" />
         <activity android:name=".Activities.RegisterSetNameActivity" />
         <activity android:name=".Activities.RegisterGenPassActivity" />
-        <activity android:name=".Activities.ForgotPasswordActivity"/>
+        <activity android:name=".Activities.ForgotPasswordActivity" />
+        <activity android:name=".Activities.ViewNotesActivity" />
+        <activity android:name=".Activities.ViewTodoActivity" />
+        <activity android:name=".Activities.CreateNoteActivity" />
+        <activity android:name=".Activities.CreateTodoActivity" />
     </application>
 
 </manifest>

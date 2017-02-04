@@ -26,5 +26,6 @@
 
     <string name="slide_4_title">So! Lets Start the Fun!</string>
     <string name="slide_4_desc">Lock Anything and Everything with Ultimate Ease</string>
+    <string name="title_activity_test">TestActivity</string>
 
 </resources>

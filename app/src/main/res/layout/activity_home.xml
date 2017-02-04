@@ -72,7 +72,6 @@
                         fab:fab_colorPressed="@color/accent_dark"
                         fab:fab_plusIconColor="@color/white"
                         fab:fab_icon="@drawable/ic_note_add_black_24dp"
-                        fab:fab_size="normal"
                         fab:fab_title="Create Notes" />
 
                     <com.getbase.floatingactionbutton.FloatingActionButton
@@ -87,16 +86,17 @@
 
                     <com.getbase.floatingactionbutton.FloatingActionButton
                         android:id="@+id/fab_files"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="200dp"
+                        android:layout_height="10dp"
                         fab:fab_colorNormal="@color/accent"
                         fab:fab_colorPressed="@color/accent_dark"
                         fab:fab_plusIconColor="@color/white"
                         fab:fab_icon="@drawable/ic_attach_file_black_24dp"
-                        fab:fab_size="normal"
                         fab:fab_title="Add to Vault" />
 
                 </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -107,32 +107,77 @@
                     android:layout_alignParentStart="true"
                     android:weightSum="1">
 
-                    <Button
-                        android:layout_width="189dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Notes"
-                        android:id="@+id/button"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_weight="0.08"
-                        android:background="@color/accent" />
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="Notes">
+                            <ImageButton
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/noteshome"
+                                android:scaleType="centerInside"
+                                android:onClick="Notes"/>
+                            <Button
+                                android:layout_width="190dp"
+                                android:layout_height="wrap_content"
+                                android:text="Notes"
+                                android:onClick="Notes"
+                                android:id="@+id/btnNotes"
+                                android:layout_gravity="center_vertical"
+                                />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:onClick="Todo">
+                            <Button
+                                android:layout_width="190dp"
+                                android:layout_height="wrap_content"
+                                android:text="ToDo List"
+                                android:id="@+id/btnTodo"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="10dp"
+                                android:onClick="Todo"/>
+                        <ImageButton
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/todohome"
+                            android:scaleType="centerInside"
+                            android:onClick="Todo"/>
+                    </LinearLayout>
 
-                    <Button
-                        android:layout_width="164dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="ToDo"
-                        android:id="@+id/button2"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_weight="0.06"
-                        android:background="@color/accent"
-                        android:layout_margin="10dp" />
-
-                    <Button
-                        android:layout_width="142dp"
-                        android:layout_height="wrap_content"
-                        android:text="Locker"
-                        android:id="@+id/button3"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@color/accent" />
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:onClick="Vault">
+                        <ImageButton
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/vaulthome"
+                            android:scaleType="centerInside"
+                            android:onClick="Vault"/>
+                        <Button
+                            android:layout_width="190dp"
+                            android:layout_height="wrap_content"
+                            android:text="File Vault"
+                            android:id="@+id/btnVault"
+                            android:layout_gravity="center_vertical"
+                            android:onClick="Vault"/>
+                    </LinearLayout>
                 </LinearLayout>
 
             </RelativeLayout>
