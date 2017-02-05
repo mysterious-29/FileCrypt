@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_about"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mysterious.filecrypt.Activities.AboutActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/teamToolbar"
+        android:background="@color/colorPrimary"
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About FileCrypt"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:gravity="center_horizontal"
+            android:layout_marginRight="20dp"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/teamToolbar">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FileCrypt is a very useful utility app. Its features include : \n\n
+ 1. You can take notes and store all your confidential info at a safe place.\n\n 2. Create a To-Do for all your important tasks that you can access through your password.\n\n 3. Encrypt your files and data and hide them in a Vault so that they are not accessible through other apps. And then decrypt at the same place whenever needed."/>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

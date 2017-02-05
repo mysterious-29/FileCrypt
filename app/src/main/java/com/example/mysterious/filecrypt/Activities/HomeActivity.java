@@ -57,6 +57,8 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         context = this;
 
+
+
         fab_files = (com.getbase.floatingactionbutton.FloatingActionButton)findViewById(R.id.fab_files);
         fab_files.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -155,7 +157,8 @@ public class HomeActivity extends AppCompatActivity {
 
         switch(position) {
             case 0:
-                startActivity(new Intent(this,WelcomeActivity.class));
+
+                startActivity(new Intent(this,AboutActivity.class));
                 break;
             case 1:
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
@@ -185,6 +188,7 @@ public class HomeActivity extends AppCompatActivity {
         setTitle(titles[position]);
         mDrawerLayout.closeDrawer(mDrawerList);
     }
+
 
 
     @Override
