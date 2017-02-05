@@ -50,6 +50,7 @@ public class CheckInActivity extends AppCompatActivity {
             //Toast.makeText(this,"Loading your Account", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this,HomeActivity.class);
             startActivity(intent);
+            finish();
         }
         else
         {
