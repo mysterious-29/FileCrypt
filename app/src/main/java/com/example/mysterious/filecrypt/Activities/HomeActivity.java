@@ -21,6 +21,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -152,6 +153,42 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            exitByBackKey();
+
+            //moveTaskToBack(false);
+
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    protected void exitByBackKey() {
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setTitle("Exit App");
+        alertDialog.setMessage("Are you sure you want to exit ?");
+        alertDialog.setIcon(android.R.drawable.ic_menu_close_clear_cancel);
+        alertDialog.setPositiveButton("Leave", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+
+        });
+        alertDialog.setNegativeButton("Stay", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+        alertDialog.show();
+
+    }
+
+
+
+
     private void selectOptionFromNav(int position){
 
 
@@ -162,7 +199,7 @@ public class HomeActivity extends AppCompatActivity {
                 break;
             case 1:
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
-                String uriText = "mailto:" + Uri.encode("abcdef@gmail.com") + "?subject=" + Uri.encode("Reporting A Bug/Feedback") + "&body=" + Uri.encode("Hello, \nI want to report a bug/give feedback corresponding to the app FileCrypt App.\n.....\n\n-Your name");
+                String uriText = "mailto:" + Uri.encode("aadityaaaaroraa@gmail.com") + "?subject=" + Uri.encode("Reporting A Bug/Feedback") + "&body=" + Uri.encode("Hello, \nI want to report a bug/give feedback corresponding to the app FileCrypt App.\n.....\n\n-Your name");
                 Uri uri = Uri.parse(uriText);
                 intent.setData(uri);
                 startActivity(Intent.createChooser(intent, "Send Email"));
@@ -176,7 +213,7 @@ public class HomeActivity extends AppCompatActivity {
             case 4:
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
                 alertDialog.setTitle("Contact Us");
-                alertDialog.setMessage("\nReach us at : \n\n\nContact No. : 9898xxxxxx \n\n\nEmail Id : abcdef@gmail.com\n\n");
+                alertDialog.setMessage("\nReach us at : \n\n\nContact No. : 9461308222 \n\n\nEmail Id : aadityaaaaroraa@gmail.com\n\n");
                 alertDialog.setIcon(android.R.drawable.sym_contact_card);
                 alertDialog.show();
                 break;
