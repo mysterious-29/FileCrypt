@@ -12,7 +12,61 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome your note personal"
-        android:id="@+id/tvResult"/>
+        android:layout_marginTop="20dp"
+        android:id="@+id/tvTitle"
+        android:text="Title"
+        android:textSize="40dp"
+        android:padding="5dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginTop="5dp"
+        android:id="@+id/tvContent"
+        android:padding="5dp"
+        android:text="Abc is a very good boy. he loves coding"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/tvDate"
+        android:text="Date"
+        android:gravity="right"
+        android:padding="5dp"
+        android:textStyle="italic"
+        android:layout_below="@+id/tvContent"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/llButtons"
+        android:layout_below="@id/tvDate"
+        android:layout_marginTop="30dp"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:gravity="center">
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="0.01"
+            android:layout_marginRight="50dp"
+            android:id="@+id/btnEditNote"
+            android:src="@drawable/editnote"
+            android:scaleType="centerInside"/>
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="0.01"
+            android:layout_marginLeft="50dp"
+            android:id="@+id/btnDeleteNote"
+            android:src="@drawable/deletenote"
+            android:scaleType="centerInside"/>
+
+    </LinearLayout>
+
 
 </RelativeLayout>

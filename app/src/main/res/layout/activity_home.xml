@@ -116,7 +116,7 @@
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:onClick="Notes">
-                            <ImageButton
+                            <ImageView
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
                                 android:layout_marginRight="10dp"
@@ -148,7 +148,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:layout_margin="10dp"
                                 android:onClick="Todo"/>
-                        <ImageButton
+                        <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_marginRight="10dp"
@@ -165,7 +165,7 @@
                         android:gravity="center"
                         android:layout_marginTop="10dp"
                         android:onClick="Vault">
-                        <ImageButton
+                        <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_marginRight="10dp"
