@@ -27,7 +27,7 @@ public class CreateNoteActivity extends AppCompatActivity {
         tbNoteTitle = (EditText)findViewById(R.id.tbNoteTitle);
         tbNoteContent = (EditText)findViewById(R.id.tbNoteContent);
         btnSave = (Button)findViewById(R.id.btnSave);
-        tbNoteId = (EditText)findViewById(R.id.tbNoteId);
+        //tbNoteId = (EditText)findViewById(R.id.tbNoteId);
         dbobj = new DatabaseOperations(this);
 
         btnSave.setOnClickListener(new View.OnClickListener() {
@@ -35,11 +35,11 @@ public class CreateNoteActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String noteid, notetitle, notecontent;
 
-                noteid = tbNoteId.getText().toString();
+                //noteid = tbNoteId.getText().toString();
                 notetitle = tbNoteTitle.getText().toString();
                 notecontent = tbNoteContent.getText().toString();
 
-                long result = dbobj.AddNotes(noteid, notetitle, notecontent);
+                long result = dbobj.AddNotes(notetitle, notecontent);
                 if (result > 0) {
                     Toast.makeText(getApplicationContext(), "Note Saved", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(getApplicationContext(), HomeActivity.class);

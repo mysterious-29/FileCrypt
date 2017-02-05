@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+
 /**
  * Created by jaykay12 on 5/2/17.
  */
@@ -19,7 +21,7 @@ public class DatabaseOperations extends SQLiteOpenHelper {
 
 //------------------------------------Database Opening/ (Database Creation and Table Creations)--------------
         db = context.openOrCreateDatabase(dbname,SQLiteDatabase.CREATE_IF_NECESSARY,null);
-        String tbl="create table if not exists notes ( noteid int primary key, notetitle text, notecontent text)";
+        String tbl="create table if not exists notes ( noteid integer primary key autoincrement, notetitle text, notecontent text, notecreated DATETIME DEFAULT CURRENT_TIMESTAMP)";
         db.execSQL(tbl);
 
 
@@ -35,12 +37,12 @@ public class DatabaseOperations extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
     }
 
-    public long AddNotes(String noteid, String notetitle, String notecontent)
+    public long AddNotes(String notetitle, String notecontent)
     {
         db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
-        cv.put("noteid",noteid);
+        //cv.put("noteid",noteid);
         cv.put("notetitle",notetitle);
         cv.put("notecontent",notecontent);
 
@@ -52,9 +54,27 @@ public class DatabaseOperations extends SQLiteOpenHelper {
     {
         db = this.getReadableDatabase();
 
-        String qry = "select noteid,notetitle,notecontent from notes";
+        String qry = "select noteid,notetitle,notecontent,notecreated from notes";
         Cursor cr = db.rawQuery(qry, null);
         return cr;
+    }
+
+    public ArrayList ReadData(String noteid)
+    {
+        ArrayList info = new ArrayList();
+        db = this.getReadableDatabase();
+
+        String qry = "select * from notes where noteid="+noteid;
+        Cursor cr = db.rawQuery(qry, null);
+
+        if(cr.moveToNext())
+        {
+            info.add(cr.getString(1));
+            info.add(cr.getString(2));
+            info.add(cr.getString(3));
+            info.add(cr.getString(4));
+        }
+        return info;
     }
 
 }

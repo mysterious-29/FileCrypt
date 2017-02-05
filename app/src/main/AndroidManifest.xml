@@ -29,7 +29,8 @@
         <activity android:name=".Activities.CreateNoteActivity" />
         <activity android:name=".Activities.CreateTodoActivity" />
         <activity android:name=".Activities.SettingsActivity" />
-        <activity android:name=".Activities.TeamActivity"></activity>
+        <activity android:name=".Activities.TeamActivity"/>
+        <activity android:name=".Activities.ViewNoteDescriptionActivity"/>
     </application>
 
 </manifest>
