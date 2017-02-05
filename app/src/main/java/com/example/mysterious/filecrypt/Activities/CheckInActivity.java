@@ -3,6 +3,8 @@ package com.example.mysterious.filecrypt.Activities;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +18,7 @@ import com.example.mysterious.filecrypt.R;
 
 public class CheckInActivity extends AppCompatActivity {
 
+    CoordinatorLayout coordinatorLayout;
     EditText tbInputPassword;
     Button btnGo;
     TextView tvNameSelected,tvForgotPassword,tvNotice;
@@ -31,6 +34,7 @@ public class CheckInActivity extends AppCompatActivity {
         imgLockCondition = (ImageView)findViewById(R.id.imgLockCondition);
         tvForgotPassword = (TextView)findViewById(R.id.tvForgotPassword);
         tvNotice = (TextView)findViewById(R.id.tvNotice);
+        coordinatorLayout = (CoordinatorLayout)findViewById(R.id.coordinatorLayout);
 
         SharedPreferences spref = getSharedPreferences("UserInfo",Context.MODE_PRIVATE);
         SharedPreferences.Editor edit = spref.edit();
@@ -58,13 +62,17 @@ public class CheckInActivity extends AppCompatActivity {
             if(counter<3)
             {
                 imgLockCondition.setImageResource(R.drawable.lock_closed_black);
-                tvNotice.setText("Incorrect Password...!!!!");
+                Snackbar snackbar = Snackbar.make(coordinatorLayout,"Incorrect Password...!!!!",Snackbar.LENGTH_LONG);
+                snackbar.show();
+                //tvNotice.setText("Incorrect Password...!!!!");
             }
             else
             {
                 btnGo.setEnabled(false);
                 imgLockCondition.setImageResource(R.drawable.phonelink_lock_);
-                tvNotice.setText("Locker Locked...!!!");
+                Snackbar snackbar = Snackbar.make(coordinatorLayout,"Locker Locked...!!!",Snackbar.LENGTH_LONG);
+                snackbar.show();
+                //tvNotice.setText("Locker Locked...!!!");
             }
             tvForgotPassword.setTextColor(0xFFF06D2F);
         }
