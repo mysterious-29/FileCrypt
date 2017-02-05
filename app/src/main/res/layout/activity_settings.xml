@@ -29,7 +29,72 @@
         android:layout_below="@id/settingsToolbar"
         android:padding="16dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Change Password"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"/>
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:hint="Current Password"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:inputType="textPassword"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show"/>
+        </LinearLayout>
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:hint="New Password"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:inputType="textPassword"/>
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:hint="Confirm Password"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+            android:inputType="textPassword"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Update"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"/>
+
 
     </LinearLayout>
 
