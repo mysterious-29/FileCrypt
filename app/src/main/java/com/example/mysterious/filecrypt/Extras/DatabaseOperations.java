@@ -59,21 +59,19 @@ public class DatabaseOperations extends SQLiteOpenHelper {
         return cr;
     }
 
-    public ArrayList ReadData(String noteid)
+    public ArrayList ReadNote(Integer noteid)
     {
         ArrayList info = new ArrayList();
         db = this.getReadableDatabase();
 
         String qry = "select * from notes where noteid="+noteid;
         Cursor cr = db.rawQuery(qry, null);
-
-        if(cr.moveToNext())
-        {
+        cr.moveToFirst();
+            info.add(cr.getString(0));
             info.add(cr.getString(1));
             info.add(cr.getString(2));
             info.add(cr.getString(3));
-            info.add(cr.getString(4));
-        }
+
         return info;
     }
 

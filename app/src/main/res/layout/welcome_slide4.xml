@@ -12,9 +12,10 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/img_width_height"
-            android:src="@drawable/welcome" />
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/welcome"
+            android:layout_marginBottom="20dp"/>
 
         <TextView
             android:layout_width="wrap_content"
