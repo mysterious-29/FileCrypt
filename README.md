@@ -1,4 +1,4 @@
-#FileCrypt
+#FileCrypt (or PrivacyShield)
 
 ##An Android applicaion for storing confidential documents with a master-password.
 ##Created in a hackathon
