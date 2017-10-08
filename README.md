@@ -5,4 +5,4 @@
 ##Team : With Jalaz Choudhary and 2 others
 ##Time : 2 days
 ##Venue: NITH
-##Prize : Runner up
+##Prize : #2nd Runner-up
